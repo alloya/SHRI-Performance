@@ -13,34 +13,31 @@
 <body>
 
     <div id="app"></div>
-    <script src="vendors/babel.min.js"></script>
 
-    <script type="text/babel" data-presets="es2015,react">
-        function Footer() {
-            return (
-                <footer class="footer">
-                    <ul class="footer__list">
-                        <li class="footer__item">
-                            <a class="footer__link" href="/">Помощь</a>
-                        </li>
-                        <li class="footer__item">
-                            <a class="footer__link" href="/">Обратная связь</a>
-                        </li>
-                        <li class="footer__item">
-                            <a class="footer__link" href="/">Разработчикам</a>
-                        </li>
-                        <li class="footer__item">
-                            <a class="footer__link" href="/">Условия использования</a>
-                        </li>
-                    </ul>
+    <footer class="footer">
+        <ul class="footer__list">
+            <li class="footer__item">
+                <a class="footer__link" href="/">Помощь</a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link" href="/">Обратная связь</a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link" href="/">Разработчикам</a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link" href="/">Условия использования</a>
+            </li>
+        </ul>
 
-                    <div class="footer__copyright">
-                        © 1997–2023 ООО «Яндекс»
-                    </div>
-                </footer>
-            )
-        }
+        <div class="footer__copyright">
+            © 1997–2023 ООО «Яндекс»
+        </div>
+    </footer>
 
+    <script src="vendors/babel.min.js" ></script>
+    <script type="text/babel" data-presets="es2015,react" async>
+        
         function Header() {
             let [expanded, setExpanded] = React.useState(false);
             let [toggled, setToggled] = React.useState(false);
@@ -396,13 +393,12 @@
                 </section>
             </main>;
         }
-
+        
         const root = ReactDOM.createRoot(document.getElementById('app'));
         root.render(
             <>
                 <Header />
                 <Main />
-                <Footer />
             </>
         );
 
